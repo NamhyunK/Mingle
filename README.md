@@ -1,3 +1,3 @@
-# melody-link
+# Social-music-player-project
 
-9팀 2차 프로젝트입니다.
+웹 소셜 뮤직 플레이어 프로젝트입니다.
