@@ -53,6 +53,8 @@ UI 부분에서는
 
 
 다음은 ppt자료입니다.
+
+
 <img width="791" alt="image" src="https://github.com/NamhyunK/Social-music-player-project/assets/134134031/5a4f4a0a-93ad-4e80-b11e-43a695083741">
 
 
