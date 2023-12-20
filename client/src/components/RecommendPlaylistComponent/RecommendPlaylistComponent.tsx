@@ -53,12 +53,16 @@ export default function RecommendPlaylistComponent({
 
   const { mutate: deleteSong } = useDeleteSong();
 
-  const handleDeleteClick = (e:React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+  const handleDeleteClick = (
+    e: React.MouseEvent<SVGSVGElement, MouseEvent>,
+  ) => {
     e.stopPropagation();
     setIsModal(true);
   };
 
-  const handleCloseModalClick = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleCloseModalClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ) => {
     e.stopPropagation();
     setIsModal(false);
   };
@@ -72,9 +76,11 @@ export default function RecommendPlaylistComponent({
     setIsHovered(false);
   };
 
-  const handleDeleteConfirmation =  (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleDeleteConfirmation = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ) => {
     e.stopPropagation();
-     deleteSong(songId);
+    deleteSong(songId);
     setIsModal(false);
   };
   const handleCardClick = () => {
@@ -98,7 +104,7 @@ export default function RecommendPlaylistComponent({
       )}
       <ProfileSection>
         <AlbumImage
-          src={`http://kdt-sw-6-team09.elicecoding.com/file/playListCover/${playListImg}`}
+          src={`http://localhost:3000/file/playListCover/${playListImg}`}
           alt="Album Cover"
         />
       </ProfileSection>

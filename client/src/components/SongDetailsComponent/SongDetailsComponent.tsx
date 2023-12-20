@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { faHeart as noLike } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as like } from '@fortawesome/free-solid-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams } from 'react-router-dom';
 import {
@@ -86,7 +85,7 @@ export default function SongDetailsPage() {
         <ImageSection>
           {song.songImageLocation && (
             <img
-              src={`http://kdt-sw-6-team09.elicecoding.com/file/songImg/${song.songImageLocation}`}
+              src={`http://localhost:3000/file/songImg/${song.songImageLocation}`}
               alt="앨범 커버"
             />
           )}

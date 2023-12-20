@@ -35,13 +35,9 @@ export default function PlaylistContentsComponent({
       playlist: title as string,
       title: songs.map((song) => song.title),
       img: songs.map(
-        (song) =>
-          `http://kdt-sw-6-team09.elicecoding.com/file/songImg/${song.img}`,
+        (song) => `http://localhost:3000/file/songImg/${song.img}`,
       ),
-      url: songs.map(
-        (song) =>
-          `http://kdt-sw-6-team09.elicecoding.com/file/audio/${song.url}`,
-      ),
+      url: songs.map((song) => `http://localhost:3000/file/audio/${song.url}`),
       idx: songId,
       isPlaying: music.isPlaying,
       volume: music.volume,

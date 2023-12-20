@@ -44,22 +44,17 @@ export default function ChartPage() {
         </svg>
       </div>
     );
-console.log(res)
+  console.log(res);
   const songs: ChartItem[] = res
     ? res.data.map((item: SongData) => ({
         _id: item.song._id,
         title: item.song.songName,
-        img: `http://kdt-sw-6-team09.elicecoding.com/file/songImg/${item.song.songImageLocation}`,
+        img: `http://localhost:3000/file/songImg/${item.song.songImageLocation}`,
         artist: item.song.songArtist || 'Unknown Artist',
         length: formatDuration(item.song.songDuration),
         isLiked: item.isCurrentUserLiked,
       }))
     : [];
 
-  return (
-    <ChartComponent
-      items={songs}
-      title="차트"
-    />
-  );
+  return <ChartComponent items={songs} title="차트" />;
 }

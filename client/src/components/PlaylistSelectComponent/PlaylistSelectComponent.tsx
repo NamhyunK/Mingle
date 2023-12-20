@@ -144,7 +144,7 @@ const PlaylistSelectComponent: React.FC<PlaylistSelectComponentProps> = ({
                     }
                   >
                     <StyledPlayListImg
-                      src={`http://kdt-sw-6-team09.elicecoding.com/file/playListCover/${playlist.playListImg}`}
+                      src={`http://localhost:3000/file/playListCover/${playlist.playListImg}`}
                       alt={playlist.playListTitle}
                     />
                     <StyledPlayListTitle>
@@ -159,7 +159,7 @@ const PlaylistSelectComponent: React.FC<PlaylistSelectComponentProps> = ({
           </StyleAddSongContainer>
         </StyleFormInputContainer>
 
-        <StyleButton type="submit" onClick={handleAddSongs} >
+        <StyleButton type="submit" onClick={handleAddSongs}>
           플레이리스트에 곡 추가
         </StyleButton>
       </StyleFormSection>

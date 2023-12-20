@@ -11,7 +11,7 @@ import {
   StyledDivider,
 } from './styles';
 import { EditableText } from './EditableTextProps';
-import {Playlists, User, UserInfo} from '../../types';
+import { Playlists, User, UserInfo } from '../../types';
 
 interface UserProfileHeaderProps {
   playlist: Playlists[];
@@ -40,10 +40,10 @@ export default function MyInfoComponent({
     onUpdate({ userDescription: updatedText });
   };
   //이미지 경로 생성
-  const imageUrl = `http://kdt-sw-6-team09.elicecoding.com/file/profile/${
+  const imageUrl = `http://localhost:3000/file/profile/${
     profile.userFile || '1701310949831.png'
   }`;
-  const imageInput = useRef<HTMLInputElement>(null) ;
+  const imageInput = useRef<HTMLInputElement>(null);
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const fileList = e.target.files;
     if (fileList && fileList[0]) {
@@ -70,7 +70,7 @@ export default function MyInfoComponent({
             style={{ display: 'none' }}
             accept="image/*"
             onChange={handleImageUpload}
-            ref={imageInput }
+            ref={imageInput}
           />
           <StyledUserImage
             src={imageUrl}
